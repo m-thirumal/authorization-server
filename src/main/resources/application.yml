@@ -1,0 +1,24 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://postgres@192.168.0.27:5432/icms
+    username: postgres
+    password: thirumal
+    pool:
+      enabled: true
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 2491
+
+
+logging:
+  level:
+#    root: DEBUG
+    org:
+      springframework:
+        web: DEBUG
+        security: 
+          oauth2: DEBUG
+        transaction: DEBUG
+        r2dbc: DEBUG
